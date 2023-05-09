@@ -64,6 +64,11 @@ export default function HomepageTemplate({
 
 export async function getServerSideProps(context) {
 	const origin = process.env.NEXT_PUBLIC_FRONTEND_URL;
+	console.log("My envvar:");
+	console.log(process.env.TEST);
+	console.log("Pantheon envvar:")
+	console.log(process.env.K_SERVICE);
+	console.log(process.env.ENV_ALLOWLIST);
 	const { locales } = context;
 	// if there is more than one language in context.locales,
 	// assume multilanguage is enabled.
